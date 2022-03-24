@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import About from "./layouts/About";
+import AppBarComp from "./layouts/AppBar";
+import Headers from "./layouts/Headers";
+import BestSeller from "./layouts/BestSeller";
+import { Box, Button } from "@mui/material";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <AppBarComp />
+   <Headers />
+   <About />
+   <BestSeller />
+   <Box sx={{
+     display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      mb: 4
+   }}>
+    <Button variant="contained" color="warning">Check All Collections</Button>
+   </Box>
+   <Footer />
+   </>
   );
 }
 
